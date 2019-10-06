@@ -3,6 +3,7 @@ import { useParams, useHistory } from "react-router";
 import { useDispatch } from "react-redux";
 import { ExampleButton } from "components/example/button";
 import { deleteOne } from "models/example/actions";
+import style from "./index.module.scss";
 
 interface Params {
     id: string,
@@ -21,7 +22,7 @@ export const ExampleDetailRoute: FunctionComponent = () => {
     )
 
     return (
-        <div>
+        <div className={style.container}>
             <ExampleButton text={`删除${id}`} onPress={onDelete} />
         </div>
     )
